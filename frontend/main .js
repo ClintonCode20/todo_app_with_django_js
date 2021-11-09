@@ -86,7 +86,7 @@ getTodos()
         console.log(item)
         let url = 'http://127.0.0.1:8000/api/create-todo'
         if(indicator == 1){
-            url = `http://127.0.0.1:8001/api/update-todo/${item_id}`
+            url = `http://127.0.0.1:8000/api/update-todo/${item_id}`
         }
         
         
@@ -124,6 +124,7 @@ function deleteTodo(e){
        
         })
         .then(function(response){
+            indicator = 0
             getTodos()
             
             
